@@ -7,6 +7,7 @@ import {
 import data from "../data"
 import ChevronDownIcon from "@heroicons/react/24/outline/ChevronDownIcon"
 import GlobeAltIcon from "@heroicons/react/24/outline/GlobeAltIcon"
+import { v4 as uuidv4 } from 'uuid';
 
 const Sidebar = () => {
 
@@ -33,14 +34,14 @@ const Sidebar = () => {
                         <ChevronDownIcon className="absolute h-5 w-5 stroke-2 top-1 right-0 transition-all duration-500 peer-checked:-rotate-180" />
                         <ul className="ml-5 overflow-hidden max-h-0 transition-all duration-500 peer-checked:max-h-[500rem] peer-checked:mt-3 flex flex-col space-y-3">
                             {
-                                data.map(item => <li className="relative">
+                                data.map(item => <li key={uuidv4()} className="relative">
                                     <input type="checkbox" className="absolute h-7 top-0 inset-x-0 peer opacity-0" />
                                     <p>{item.name}</p>
                                     <ChevronDownIcon className="absolute h-5 w-5 stroke-2 top-1 right-0 transition-all duration-500 peer-checked:-rotate-180" />
                                     <ul className="ml-5 overflow-hidden max-h-0 transition-all duration-500 peer-checked:max-h-[200rem] peer-checked:mt-3 flex flex-col space-y-3">
                                         {
-                                            item.subCategory ? item.subCategory?.map(cat => cat.data.map(subcat => <li>{subcat}</li>)) :
-                                                item.data.map(cat => <li>{cat}</li>)
+                                            item.subCategory ? item.subCategory?.map(cat => cat.data.map(subcat => <li key={uuidv4()}>{subcat}</li>)) :
+                                                item.data.map(cat => <li key={uuidv4()}>{cat}</li>)
                                         }
                                     </ul>
                                 </li>)

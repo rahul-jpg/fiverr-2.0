@@ -70,7 +70,7 @@ const Header = () => {
                     </li>
                     <li className="relative text-lg font-semibold text-primary-teal hidden lg:block tooltip-icon cursor-pointer">
                         Switch to selling
-                        <div className="order-tooltip">Access all the tools you need to sell your services. We'll set this as your default mode.</div>
+                        <div className="order-tooltip">Access all the tools you need to sell your services. We&apos;ll set this as your default mode.</div>
                     </li>
                     <li className="rounded-full relative md:block">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTcoK-dlbjL7C1eAPifV1gUs2n6ukUugyM-J5wFbSEptPEn7GCoJXnFXMDlp9SdP-JcIQ&usqp=CAU" className="h-9 w-9" alt="" />
