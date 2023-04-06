@@ -36,7 +36,7 @@ const Carousel = () => {
                     <img src="./assets/screen-2.jpg" className="object-cover h-full w-full" alt="" />
                     <div className="absolute top-5 left-5">
                         <h2 className="text-white font-bold text-3xl">Make a customize logo in minutes</h2>
-                        <p className="text-white font-semibold text-xl">Get the right logo for your brand and your budget with Fiver's logo maker.</p>
+                        <p className="text-white font-semibold text-xl">Get the right logo for your brand and your budget with Fiver&apos;s logo maker.</p>
                     </div>
                 </div>
             </SwiperSlide>
@@ -45,7 +45,7 @@ const Carousel = () => {
                     <img src="./assets/screen-3.jpg" className="object-cover h-full w-full" alt="" />
                     <div className="absolute top-5 left-5">
                         <h2 className="text-white font-bold text-3xl">Join our Bridge to gap conference</h2>
-                        <p className="text-white font-semibold text-xl">Listen and learn from the best this international women's day.</p>
+                        <p className="text-white font-semibold text-xl">Listen and learn from the best this international women&apos;s day.</p>
                     </div>
                 </div>
             </SwiperSlide>
