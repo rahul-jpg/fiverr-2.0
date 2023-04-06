@@ -19,6 +19,7 @@ import Budget from "../components/Filters/Budget"
 import DeliveryTime from "../components/Filters/DeliveryTime"
 import MediumCard from "../components/Utils/MediumCard";
 import SmallPagination from "../components/Utils/SmallPagination"
+import { v4 as uuidv4 } from 'uuid';
 
 const Category = () => {
 
@@ -182,7 +183,7 @@ const Category = () => {
                     </div>
                     <div className="mt-4 grid gap-3 lg:gap-8 max-[595px]:grid-cols-1 max-[895px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                         {
-                            currentCards.map(item => <Card />)
+                            currentCards.map(item => <Card key={uuidv4()} />)
                         }
                     </div>
 
@@ -423,7 +424,7 @@ const Category = () => {
                         <div className="px-8 mt-2">
                             <div className="">
                                 {
-                                    currentCards.map(item => <MediumCard />)
+                                    currentCards.map(item => <MediumCard key={uuidv4()} />)
                                 }
                             </div>
                             <SmallPagination cardsPerPage={cardsPerPage} totalCards={allCards.length} paginate={paginate} currentPage={currentPage} leftBtn={leftBtn} rightBtn={rightBtn} />

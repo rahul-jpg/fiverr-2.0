@@ -3,6 +3,7 @@ import ChevronRightIcon from "@heroicons/react/24/outline/ChevronRightIcon"
 import { useRef, useState } from "react"
 import data from "../data"
 import { useRouter } from "next/router"
+import { v4 as uuidv4 } from 'uuid';
 
 const CategoriesBar = () => {
     const router = useRouter()
@@ -28,7 +29,7 @@ const CategoriesBar = () => {
 
                 {
                     data.map((item, i) => (
-                        <li key={i} className="border-b-4 border-b-white cursor-pointer whitespace-nowrap py-2 hover:border-b-green-400 group">{item.name}
+                        <li key={uuidv4()} className="border-b-4 border-b-white cursor-pointer whitespace-nowrap py-2 hover:border-b-green-400 group">{item.name}
                             {
                                 item.subCategory ?
                                     <div className={`absolute transition-all duration-500 delay-500 hidden bg-white z-50 group-hover:block hover:block top-12
@@ -43,10 +44,10 @@ const CategoriesBar = () => {
                                         <div className={`flex flex-col h-full w-full gap-5 p-6 flex-wrap border`}>
                                             {
                                                 item.subCategory.map(sub => (
-                                                    <div className="leading-10">
+                                                    <div key={uuidv4()} className="leading-10">
                                                         <h2 className="text-xl mb-1 text-dark font-semibold">{sub.name}</h2>
                                                         {
-                                                            sub.data.map(subCat => <p className="" onClick={() =>
+                                                            sub.data.map(subCat => <p key={uuidv4()} className="" onClick={() =>
                                                                 router.push(`/${subCat}`)}>{subCat}</p>)
                                                         }
                                                     </div>
@@ -61,7 +62,7 @@ const CategoriesBar = () => {
                                     `}>
                                         <div className="flex flex-col h-full w-full gap-3 p-6 flex-wrap border">
                                             {
-                                                item.data && item.data.map(cat => <p onClick={() => router.push(`/${cat}`)}>{cat}</p>)
+                                                item.data && item.data.map(cat => <p key={uuidv4()} onClick={() => router.push(`/${cat}`)}>{cat}</p>)
                                             }
                                         </div>
                                     </div>
